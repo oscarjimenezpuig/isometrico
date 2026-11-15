@@ -3,7 +3,7 @@
 # ============================================================
 
 TARGET = isometrico
-SRCS   = espacio.c
+SRCS   = isometrico.c
 
 # Archivo que almacena el tipo de compilación
 # N = normal
