@@ -10,7 +10,7 @@
 
 #define CHGS ((SPCX*SPCY)+(SPCX*SPCZ)*(SPCY*SPCZ) - SPCX - SPCZ -SPCY)
 
-#define VOXNUL (voxel_t){0,0};
+#define VOXNUL (voxel_t){1};
 
 // Tipos
 
@@ -21,8 +21,13 @@ typedef unsigned short ushort;
 typedef unsigned char flag_t;
 
 typedef struct {
+    uchar vin : 1; //dice que el boxel es nulo
     uchar rot : 2; //rotacion del voxel
-    uchar col : 6; //codigo de color del voxel (63 codigos de color), el color 0 da el voxel nulo
+    uchar csu : 2; //color de la cara superior
+    uchar csf : 2; //color de la frontal (eje x)
+    uchar csi : 2; //color de la izquierda de la frontal
+    uchar csd : 2; //color de la derecha de la frontal
+    uchar cst : 2; //color de la trasera
 } voxel_t;
 
 typedef voxel_t space_t[SPCX][SPCY][SPCZ];

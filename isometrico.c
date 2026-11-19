@@ -7,7 +7,7 @@ principal_t principal;
 #define ilm(A,L) (A<L)
 
 flag_t vox_is_nul(voxel_t v) {
-    return v.col==0;
+    return v.vin;
 }
 
 void spc_clr() {
