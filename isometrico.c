@@ -172,11 +172,9 @@ void prc_prt() {
 
 //prueba
 
-//TODO Esta prueba de orden no funciona, mirarla
-
 int main() {
     spc_clr();
-    voxel_t vox={1,1};
+    voxel_t vox={0,1,1,1,1,1,1};
     spc_ins(0,0,0,vox);
     spc_ins(1,1,1,vox);
     spc_ins(2,2,2,vox);

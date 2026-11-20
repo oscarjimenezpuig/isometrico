@@ -10,18 +10,19 @@
 
 #define CHGS ((SPCX*SPCY)+(SPCX*SPCZ)*(SPCY*SPCZ) - SPCX - SPCZ -SPCY)
 
-#define VOXNUL (voxel_t){1};
+#define VOXNUL (voxel_t){1,0,0,0,0,0,0};
 
 // Tipos
 
 typedef unsigned char uchar;
 typedef signed char schar;
 typedef unsigned short ushort;
+typedef unsigned long ulong;
 
 typedef unsigned char flag_t;
 
 typedef struct {
-    uchar vin : 1; //dice que el boxel es nulo
+    uchar vin : 1; //dice que el voxel es nulo
     uchar rot : 2; //rotacion del voxel
     uchar csu : 2; //color de la cara superior
     uchar csf : 2; //color de la frontal (eje x)
